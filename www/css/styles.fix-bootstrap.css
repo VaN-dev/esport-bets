@@ -1,0 +1,29 @@
+input[type=text], 
+input[type=password] {
+	
+}
+
+.hero-unit {
+	padding:30px;
+}
+
+.carousel-control {
+	top:47%;
+}
+.carousel .item {
+	height:300px;
+}
+
+.input-prepend.input-append .add-on:first-child, .input-prepend.input-append .btn:first-child {
+	margin-left:0px;
+}
+
+.accordion-heading {
+	background:#EEE;
+}
+.accordion-toggle-icon {
+	float:right;
+}
+.btn-odds {
+	min-width:50px;
+}

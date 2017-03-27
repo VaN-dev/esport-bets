@@ -1,0 +1,44 @@
+.grouped-selector-first {
+	border-right:0px;
+	border-radius:0px !important;
+}
+.grouped-selector-middle {
+	border-radius:0px !important;
+}
+.grouped-selector-last {
+	border-left:0px;
+}
+
+
+.bet-form {
+
+}
+.bet-form label {
+	float:left;
+	width:100px;
+	height:30px;
+	line-height:30px;
+}
+.bet-form span {
+	float:left;
+	height:30px;
+	line-height:30px;
+}
+.bet-form #stake {
+	float:left;
+	width:50px;
+	margin:0 5px 0 0;
+}
+.bet-form .currency-container {
+	margin:0 0 0 5px;
+}
+
+.register-form label {
+	margin:20px 0 0 0;
+}
+.register-form #captcha {
+	margin:3px 0 0 0;
+}
+.register-form #cryptogram-reloader {
+	margin:0 10px 0 5px;
+}

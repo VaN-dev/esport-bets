@@ -1,0 +1,208 @@
+.footer ul {
+	margin:0;
+	padding:0;
+	
+}
+.footer li {
+	list-style-type:none;
+}
+.footer a {
+	color: inherit;
+	font-size:12px;
+	border-bottom:1px dotted #333;
+	text-decoration:none;
+}
+
+.btn-analyze {
+	position:absolute;
+	bottom:20px;
+	left:500px;
+}
+
+hr {
+	margin:5px 0;
+	height:1px;
+	border-top:1px solid #DDD;
+}
+
+
+
+
+/****************************************/
+/*	BLOCKS								*/
+/****************************************/
+.block {
+    border-radius: 4px 4px 4px 4px;
+	padding:10px;
+	
+	border:1px solid #DDD;
+	-webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+	-moz-box-sizing: border-box;    /* Firefox, other Gecko */
+	box-sizing: border-box;         /* Opera/IE 8+ */
+	-moz-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+	-webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+	box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+}
+
+
+/****************************************/
+/*	REGISTER							*/
+/****************************************/
+.btn-group > input {
+    display: none;
+}
+
+.btn-group input:first-child + .btn {
+     /* This is an actual copy/paste of the .btn-group .btn:first-child style */
+    border-bottom-left-radius: 4px;
+    border-top-left-radius: 4px;
+    margin-left: 0;
+}
+
+input:checked + label.btn {
+    /* This is an actual copy/paste of the .btn:active style */
+    background-color: #5BB75B;
+    background-image: linear-gradient(to bottom, #62C462, #51A351);
+    background-repeat: repeat-x;
+    border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
+    color: #FFFFFF;
+    text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+}
+
+input[disabled] + label.btn {
+    /* This is an actual copy/paste of the .btn:disabled style */
+    background-color: #E6E6E6;
+    background-image: none;
+    box-shadow: none;
+    cursor: default;
+    opacity: 0.65;
+}
+
+/****************************************/
+/*	NAVBAR								*/
+/****************************************/
+#navbar-profile {
+	position:relative;
+	line-height:42px;
+}
+
+#dropdown-user {
+position:absolute;
+	right:0px;
+	top:38px;
+    right: 12px;
+	font-size:12px;
+	width:450px;
+}
+#dropdown-user li {
+	padding:3px 20px;
+}
+#dropdown-user li.divider {
+	padding:0px;
+}
+#dropdown-user .dates {
+	background:#0088CC;
+	color:#FFF;
+	font-weight:bold;
+	padding:4px;
+	margin:0 0 5px 0;
+}
+#dropdown-user th, #dropdown-user td {
+	padding:4px;
+}
+.navbar .dropdown-menu:before {
+    border-bottom: 7px solid rgba(0, 0, 0, 0.2);
+    border-left: 7px solid transparent;
+    border-right: 7px solid transparent;
+    content: "";
+    display: inline-block;
+    left: 9px;
+    position: absolute;
+    top: -7px;
+}
+.navbar .dropdown-menu:after {
+    border-bottom: 6px solid #FFFFFF;
+    border-left: 6px solid transparent;
+    border-right: 6px solid transparent;
+    content: "";
+    display: inline-block;
+    right: 270px;
+    position: absolute;
+    top: -6px;
+}
+.navbar .dropdown-menu .earnings-container {
+	color:#090;
+}
+
+
+/****************************************/
+/*	BANNER								*/
+/****************************************/
+.carousel-inner {
+	position:relative;
+}
+.banner-description {
+	width:1170px;
+	height:60px;
+	position:absolute;
+	bottom:0px;
+	background:#0A0A0A;
+	opacity:0.9;
+}
+.banner-description .btn-left {
+	float:left;
+	margin:14px 0 0 80px;
+}
+.banner-description .btn-right {
+	float:right;
+	margin:14px 80px 0 0;
+}
+
+
+/****************************************/
+/*	BETS								*/
+/****************************************/
+.icone-chat {
+	margin:4px 0 0 0;
+}
+
+/****************************************/
+/*	MATCHES								*/
+/****************************************/
+.match-opponent-block {
+	text-align:center;
+}
+
+/****************************************/
+/*	SHOP								*/
+/****************************************/
+.index-shop {
+	margin-top:10px;
+	margin-bottom:10px;
+}
+.index-shop .span3 {
+	margin-left:20px;
+	margin-bottom:0px;
+}
+.index-shop .span3:first-child {
+	margin-left:30px;
+}
+.index-shop a.thumbnail {
+	color:#333;
+	text-align:center;
+}
+.index-shop a.thumbnail:hover {
+	text-decoration:none;
+	box-shadow:3px;
+	border-color:#999;
+}
+.index-shop a.thumbnail h4 {
+	margin:0px;
+}
+.index-shop a.thumbnail p {
+	margin:0px;
+}
+.index-shop .see-all {
+	float:right;
+}
+

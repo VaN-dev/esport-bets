@@ -1,0 +1,18 @@
+.text-left {
+	text-align:left !important;
+}
+.text-right {
+	text-align:right !important;
+}
+
+.vertical-middle {
+	vertical-align:middle !important;
+}
+
+.display-none {
+display:none;
+}
+
+.clear-both {
+clear:both;
+}
