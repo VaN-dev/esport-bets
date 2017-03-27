@@ -25,10 +25,10 @@ if(isset($_POST['action']) && $_POST['action'] == 'bet') {
 		
 		// Définition des propriétés
 		$bet->user_id	= $session_user->id;
-		$bet->datetime = mysql_real_escape_string($_POST['datetime']);
-		$bet->match_id	= mysql_real_escape_string($_POST['match_id']);
-		$bet->opponent_id	= mysql_real_escape_string($_POST['opponent_id']);
-		$bet->stake	= mysql_real_escape_string($_POST['stake']);
+		$bet->datetime = $sql->escape($_POST['datetime']);
+		$bet->match_id	= $sql->escape($_POST['match_id']);
+		$bet->opponent_id	= $sql->escape($_POST['opponent_id']);
+		$bet->stake	= $sql->escape($_POST['stake']);
 		$bet->statut = 1;
 		
 		$bet->odds_id = $bet->getLatestOddsIdFromMatchAndOpponent();

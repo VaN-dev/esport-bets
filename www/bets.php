@@ -207,7 +207,7 @@ $(function() {
 											foreach($matches as $key_match => $match) {
 												?>
 													<tr>
-														<td><a href="match.php?id=<?php echo $match->id; ?>" title="comments"><img src="images/icon-chat.jpg" alt="" class="icone-chat" /></a></td>
+														<td width="50"><a href="match.php?id=<?php echo $match->id; ?>" title="comments"><img src="images/icon-chat.jpg" alt="" class="icone-chat" /></a></td>
 														<td class="vertical-middle"><?php echo $match->start_formatted; ?></td>
 														<td class="vertical-middle"><?php echo stripslashes($match->opponents[0]->name); ?></td>
 														<td><a href="#myModal" role="button" class="btn-odds btn btn-success btn-block" data-toggle="modal" data-id="<?php echo $match->opponents[0]->odds_id; ?>" data-match-id="<?php echo $match->id; ?>" data-opponent-id="<?php echo $match->opponents[0]->opponent_id; ?>"><?php echo $match->opponents[0]->value; ?></a></td>

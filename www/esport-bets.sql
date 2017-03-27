@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.5.4.1deb2ubuntu2
--- http://www.phpmyadmin.net
+-- version 4.6.4deb1
+-- https://www.phpmyadmin.net/
 --
--- Client :  localhost
--- Généré le :  Lun 27 Mars 2017 à 20:05
--- Version du serveur :  5.7.17-0ubuntu0.16.04.1
--- Version de PHP :  7.0.15-0ubuntu0.16.04.4
+-- Client :  localhost:3306
+-- Généré le :  Lun 27 Mars 2017 à 20:46
+-- Version du serveur :  5.7.17
+-- Version de PHP :  7.0.15-0ubuntu0.16.10.4
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
@@ -41,13 +41,6 @@ CREATE TABLE `ebets_bets` (
   `statut` tinyint(1) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
---
--- Contenu de la table `ebets_bets`
---
-
-INSERT INTO `ebets_bets` (`id`, `match_id`, `user_id`, `noticed`, `datetime`, `opponent_id`, `odds_id`, `stake`, `statut`) VALUES
-(1, 1, 1, 0, '2017-03-21 21:31:17', 1, 1, 10, 1);
-
 -- --------------------------------------------------------
 
 --
@@ -63,14 +56,6 @@ CREATE TABLE `ebets_comments` (
   `user_id` int(11) NOT NULL,
   `content` text NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
---
--- Contenu de la table `ebets_comments`
---
-
-INSERT INTO `ebets_comments` (`id`, `datetime`, `statut`, `match_id`, `user_id`, `content`) VALUES
-(1, '2017-03-21 21:23:27', 1, 1, 1, 'test'),
-(2, '2017-03-21 21:25:07', 1, 1, 1, 'test');
 
 -- --------------------------------------------------------
 
@@ -123,15 +108,16 @@ CREATE TABLE `ebets_config` (
 DROP TABLE IF EXISTS `ebets_games`;
 CREATE TABLE `ebets_games` (
   `id` int(11) NOT NULL,
-  `name` varchar(255) NOT NULL
+  `name` varchar(255) NOT NULL,
+  `icon` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Contenu de la table `ebets_games`
 --
 
-INSERT INTO `ebets_games` (`id`, `name`) VALUES
-(1, 'Counter-Strike');
+INSERT INTO `ebets_games` (`id`, `name`, `icon`) VALUES
+(1, 'League of Legends', 'icon-lol.png');
 
 -- --------------------------------------------------------
 
@@ -147,15 +133,16 @@ CREATE TABLE `ebets_matches` (
   `end` datetime DEFAULT NULL,
   `featured` tinyint(1) NOT NULL,
   `statut` tinyint(4) NOT NULL,
-  `winner_id` int(11) NOT NULL
+  `winner_id` int(11) NOT NULL,
+  `banner` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Contenu de la table `ebets_matches`
 --
 
-INSERT INTO `ebets_matches` (`id`, `game_id`, `start`, `end`, `featured`, `statut`, `winner_id`) VALUES
-(1, 1, '2017-03-31 00:00:00', '2017-03-31 02:00:00', 1, 1, 0);
+INSERT INTO `ebets_matches` (`id`, `game_id`, `start`, `end`, `featured`, `statut`, `winner_id`, `banner`) VALUES
+(1, 1, '2017-03-31 00:00:00', '2017-03-31 02:00:00', 1, 1, 0, 'eg_vs_gg_2.jpg');
 
 -- --------------------------------------------------------
 
@@ -198,8 +185,8 @@ CREATE TABLE `ebets_opponents` (
 --
 
 INSERT INTO `ebets_opponents` (`id`, `name`, `image`) VALUES
-(1, 'Player #1', ''),
-(2, 'Player #2', '');
+(1, 'Evil Geniuses', 'evil-geniuses.jpg'),
+(2, 'Gambit Gaming', 'gambit-gaming.jpg');
 
 -- --------------------------------------------------------
 
@@ -226,7 +213,7 @@ CREATE TABLE `ebets_users` (
 --
 
 INSERT INTO `ebets_users` (`id`, `mail`, `datetime`, `password`, `activation_key`, `firstname`, `birthdate`, `points`, `last_bet_datetime`, `statut`) VALUES
-(1, 'fanel.dev@gmail.com', '2017-03-21 21:19:15', 'b0e78e25f2a5599ecba2fe159e012546e47d62ff', 'lJCYZawjwf', 'Fanel', '1983-03-29', 90, NULL, 1);
+(1, 'fanel.dev@gmail.com', '2017-03-21 21:19:15', 'b0e78e25f2a5599ecba2fe159e012546e47d62ff', 'lJCYZawjwf', 'Fanel', '1983-03-29', 100, NULL, 1);
 
 --
 -- Index pour les tables exportées
@@ -289,12 +276,12 @@ ALTER TABLE `ebets_users`
 -- AUTO_INCREMENT pour la table `ebets_bets`
 --
 ALTER TABLE `ebets_bets`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 --
 -- AUTO_INCREMENT pour la table `ebets_comments`
 --
 ALTER TABLE `ebets_comments`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 --
 -- AUTO_INCREMENT pour la table `ebets_config`
 --
